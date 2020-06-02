@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Chindit\Transport;
 
+use JsonException;
+use LogicException;
 use Pheanstalk\JobId;
 use Pheanstalk\Pheanstalk;
 use Symfony\Component\Messenger\Envelope;
@@ -16,10 +18,12 @@ class BeanstalkTransport implements TransportInterface
 	private string $defaultPipe;
 	private SerializerInterface $serializer;
 
-	public function __construct(string $address, ?string $defaultPipe, SerializerInterface $serializer)
+	public function __construct(array $options, SerializerInterface $serializer)
 	{
-		$this->pheanstalk = Pheanstalk::create($address);
-		$this->defaultPipe = $defaultPipe ?? 'default';
+		$port = $options['port'] ?? 11300;
+		$timeout = $options['timeout'] ?? 10;
+		$this->pheanstalk = Pheanstalk::create($options['host'], $port, $timeout);
+		$this->defaultPipe = $options['tube'] ?? 'default';
 		$this->serializer = $serializer;
 	}
 
@@ -27,7 +31,7 @@ class BeanstalkTransport implements TransportInterface
 	{
 		$job = $this->pheanstalk
 			->useTube($this->defaultPipe)
-			->reserveWithTimeout(0);
+			->reserve();
 
 		if ($job === null) {
 			return [];
@@ -53,7 +57,7 @@ class BeanstalkTransport implements TransportInterface
 			throw new LogicException('No TransportMessageIdStamp found on the Envelope');
 		}
 
-		$this->pheanstalk->useTube($this->defaultPipe)->release(new JobId($stamp->getId()));
+		$this->pheanstalk->useTube($this->defaultPipe)->delete(new JobId($stamp->getId()));
 	}
 
 	public function reject(Envelope $envelope): void

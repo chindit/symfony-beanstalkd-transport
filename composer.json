@@ -1,14 +1,15 @@
 {
     "name": "chindit/symfony-beanstalkd-transport",
     "description": "A symfony/messenger transport for Beanstalkd",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "library",
     "require": {
         "php": "^7.4",
         "ext-json": "*",
         "symfony/messenger": "^5.1",
         "symfony/polyfill-php80": "^1.17",
-        "pda/pheanstalk": "^4.0"
+        "pda/pheanstalk": "^4.0",
+        "symfony/dependency-injection": "^5.1"
     },
     "license": "GNU GLP v3",
     "autoload": {
