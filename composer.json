@@ -10,8 +10,7 @@
         "symfony/polyfill-php80": "^1.17",
         "pda/pheanstalk": "^4.0",
         "symfony/dependency-injection": "^5.1",
-        "symfony/http-kernel": "^5.1",
-        "symfony/config": "^5.1"
+        "symfony/http-kernel": "^5.1"
     },
     "license": "GNU GLP v3",
     "autoload": {
