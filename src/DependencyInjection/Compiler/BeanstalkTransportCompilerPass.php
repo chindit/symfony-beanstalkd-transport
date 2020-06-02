@@ -1,14 +1,14 @@
 <?php
 
-namespace Chindit\BeanstalkTransportBundle;
+namespace Chindit\DependencyInjection\Compiler;
 
 use Chindit\Factory\BeanstalkTransportFactory;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ChinditBeanstalkTransportBundle extends Bundle
+class BeanstalkTransportCompilerPass implements CompilerPassInterface
 {
-	public function build(ContainerBuilder $container)
+	public function process(ContainerBuilder $container)
 	{
 		if (!$container->has(BeanstalkTransportFactory::class)) {
 			return;
