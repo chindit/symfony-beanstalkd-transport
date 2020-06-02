@@ -11,7 +11,7 @@ class ChinditBeanstalkTransportBundle extends Bundle
 	public function build(ContainerBuilder $container)
 	{
 		if (!$container->has(BeanstalkTransportFactory::class)) {
-			return;
+			$container->register(BeanstalkTransportFactory::class);
 		}
 
 		$definition = $container->getDefinition(BeanstalkTransportFactory::class);
