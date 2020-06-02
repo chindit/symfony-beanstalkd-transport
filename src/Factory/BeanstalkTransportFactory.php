@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Chindit\Factory;
+
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 use Symfony\Component\Messenger\Transport\TransportFactoryInterface;
 use Symfony\Component\Messenger\Transport\TransportInterface;

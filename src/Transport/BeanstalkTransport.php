@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Chindit\Transport;
+
 use Pheanstalk\JobId;
 use Pheanstalk\Pheanstalk;
 use Symfony\Component\Messenger\Envelope;
