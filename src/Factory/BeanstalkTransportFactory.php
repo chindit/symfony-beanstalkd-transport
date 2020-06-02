@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Chindit\Bundle\Factory;
 
-use Chindit\Exception\ConfigurationException;
+use Chindit\Bundle\Exception\ConfigurationException;
 use Chindit\Bundle\Transport\BeanstalkTransport;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 use Symfony\Component\Messenger\Transport\TransportFactoryInterface;
