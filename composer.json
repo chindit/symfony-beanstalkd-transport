@@ -15,7 +15,7 @@
     "license": "GNU GLP v3",
     "autoload": {
         "psr-4": {
-            "Chindit\\": "src/"
+            "Chindit\\Bundle\\": "src/"
         }
     },
     "authors": [

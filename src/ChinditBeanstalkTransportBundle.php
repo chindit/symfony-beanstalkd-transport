@@ -1,8 +1,8 @@
 <?php
 
-namespace Chindit\BeanstalkTransportBundle;
+namespace Chindit\Bundle;
 
-use Chindit\Factory\BeanstalkTransportFactory;
+use Chindit\Bundle\Factory\BeanstalkTransportFactory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

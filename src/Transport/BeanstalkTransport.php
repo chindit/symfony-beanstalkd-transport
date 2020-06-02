@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chindit\Transport;
+namespace Chindit\Bundle\Transport;
 
 use JsonException;
 use LogicException;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chindit\Exception;
+namespace Chindit\Bundle\Exception;
 
 class ConfigurationException extends \Exception
 {

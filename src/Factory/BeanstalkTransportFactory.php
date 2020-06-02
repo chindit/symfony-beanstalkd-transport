@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Chindit\Factory;
+namespace Chindit\Bundle\Factory;
 
 use Chindit\Exception\ConfigurationException;
-use Chindit\Transport\BeanstalkTransport;
+use Chindit\Bundle\Transport\BeanstalkTransport;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 use Symfony\Component\Messenger\Transport\TransportFactoryInterface;
 use Symfony\Component\Messenger\Transport\TransportInterface;
