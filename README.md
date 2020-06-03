@@ -1,9 +1,14 @@
-# symfony-beanstalkd-transport
-symfony/messenger transport for Beanstalkd
+# Beanstalk transport for Symfony Messenger
+symfony/messenger transport for Beanstalk
 
 ### Installation
+1) Install package
 ```
-composer require chindit/symfony-beanstalkd-transport
+composer require chindit/beanstalk-transport
+```
+2) Add bundle in your `config/bundles.php`
+```
+Chindit\Bundle\ChinditBeanstalkTransportBundle::class => ['all' => true],
 ```
 
 ### Usage

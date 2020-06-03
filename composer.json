@@ -1,8 +1,9 @@
 {
-    "name": "chindit/symfony-beanstalkd-transport",
-    "description": "A symfony/messenger transport for Beanstalkd",
+    "name": "chindit/beanstalk-transport",
+    "description": "A symfony/messenger transport for Beanstalk",
     "version": "0.1.0",
     "type": "library",
+    "minimum-stability": "stable",
     "require": {
         "php": "^7.4",
         "ext-json": "*",
