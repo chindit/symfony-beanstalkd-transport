@@ -13,7 +13,7 @@
         "symfony/dependency-injection": "^5.1",
         "symfony/http-kernel": "^5.1"
     },
-    "license": "GNU GLP v3",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Chindit\\Bundle\\": "src/"
