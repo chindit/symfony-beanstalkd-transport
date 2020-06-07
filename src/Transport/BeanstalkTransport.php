@@ -30,7 +30,7 @@ class BeanstalkTransport implements TransportInterface
 	public function get(): iterable
 	{
 		$job = $this->pheanstalk
-			->useTube($this->defaultPipe)
+			->watch($this->defaultPipe)
 			->reserve();
 
 		if ($job === null) {
