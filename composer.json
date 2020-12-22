@@ -1,17 +1,16 @@
 {
     "name": "chindit/beanstalk-transport",
     "description": "A symfony/messenger transport for Beanstalk",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "library",
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.4",
+        "php": "^7.4|^8.0",
         "ext-json": "*",
-        "symfony/messenger": "^5.1",
-        "symfony/polyfill-php80": "^1.17",
+        "symfony/messenger": "^5.2",
         "pda/pheanstalk": "^4.0",
-        "symfony/dependency-injection": "^5.1",
-        "symfony/http-kernel": "^5.1"
+        "symfony/dependency-injection": "^5.2",
+        "symfony/http-kernel": "^5.2"
     },
     "license": "GPL-3.0-or-later",
     "autoload": {
